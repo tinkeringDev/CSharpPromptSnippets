@@ -26,7 +26,8 @@ namespace CSharpPromptSnippets.Controllers
         }
 
         /// <summary>
-        /// Retrieves a collection of weather forecasts.
+        /// Retrieves a collection of weather forecasts for the next five days. Each forecast includes the date, temperature in Celsius, and a summary of the weather conditions.
+        /// Example method with cognitive complexity of 34, for prompt testing purposes.
         /// </summary>
         /// <returns>An enumerable collection of <see cref="WeatherForecast"/> objects.</returns>
         [HttpGet(Name = "GetWeatherForecast")]
