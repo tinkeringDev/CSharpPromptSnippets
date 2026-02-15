@@ -2,6 +2,14 @@
 
 Prompts for intelligent C# code refactoring, along with their clickable calls. Hope these help accelerate your meaningful projects, happy building!
 
+## Quick Access
+
+### Clickable links to use the prompts directly in your VS Code Copilot Chat!
+
+#### refactor-method-complexity-reduce:
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)   
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
+
 ## Overview
 
 This repo provides prompt templates designed to work with VS Code's Copilot integration. The primary focus is reducing complexity in C# methods through intelligent extraction and refactoring, resulting in cleaner, more maintainable code.
@@ -66,14 +74,6 @@ Intelligently extracts logic from complex methods into focused helper methods to
 - Includes comprehensive post-refactoring validation steps
 
 > **Note:** The `WeatherForecastController.Get()` method is a good demonstration case, starting with cognitive complexity of 34, to try out the prompt's refactoring capabilities.
-
-## Quick Access
-
-### Clickable links to use the prompts directly in your VS Code Copilot Chat!
-
-#### refactor-method-complexity-reduce:
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)   
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
 
 ## Project Structure
 
