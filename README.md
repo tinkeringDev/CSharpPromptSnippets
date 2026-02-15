@@ -8,6 +8,11 @@ This repo provides prompt templates designed to work with VS Code's Copilot inte
 
 The project includes a sample ASP.NET Core 9.0 API with a higher complexity method, to try as reference and applying these techniques to your own projects.
 
+## Quick Access
+**Clickable links to use the prompt directly in your VS Code Copilot Chat!**
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)   
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
+
 ## Quick Start
 
 ### Prerequisites
@@ -15,14 +20,6 @@ The project includes a sample ASP.NET Core 9.0 API with a higher complexity meth
 - .NET 9.0 SDK or later
 - VS Code with Copilot extension
 - Windows, macOS, or Linux
-
-#### Quick Access
-**Clickable links to use the prompt directly in VS Code Copilot Chat:**
-```
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
-
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
-```
 
 ### Running the Application
 
