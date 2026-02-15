@@ -10,7 +10,7 @@ tools: ['search/changes', 'search/codebase', 'edit/editFiles', 'read/problems', 
 # Refactor Method to Reduce Cognitive Complexity
 
 ## Objective
-Refactor the method `${input:methodName}`, to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting logic into focused helper methods.
+Refactor given method `${input:methodName}`, to reduce its cognitive complexity to `${input:complexityThreshold}` or below, by extracting logic into focused helper methods.
 
 ## Instructions
 
