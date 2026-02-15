@@ -8,17 +8,12 @@ This repo provides prompt templates designed to work with VS Code's Copilot inte
 
 The project includes a sample ASP.NET Core 9.0 API with a higher complexity method, to try as reference and applying these techniques to your own projects.
 
-## Quick Access
-**Clickable links to use the prompt directly in your VS Code Copilot Chat!**
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)   
-[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
-
 ## Quick Start
 
 ### Prerequisites
 
 - .NET 9.0 SDK or later
-- VS Code with Copilot extension
+- VS Code with Copilot and Promptu extension
 - Windows, macOS, or Linux
 
 ### Running the Application
@@ -71,6 +66,14 @@ Intelligently extracts logic from complex methods into focused helper methods to
 - Includes comprehensive post-refactoring validation steps
 
 > **Note:** The `WeatherForecastController.Get()` method is a good demonstration case, starting with cognitive complexity of 34, to try out the prompt's refactoring capabilities.
+
+## Quick Access
+
+### Clickable links to use the prompts directly in your VS Code Copilot Chat!
+
+#### refactor-method-complexity-reduce:
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_%7C_promptu-Prompt_Name-0098FF?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)   
+[![Run in VS Code](https://img.shields.io/badge/VS_Code_Insiders_%7C_promptu-Prompt_Name-24bfa5?style=flat-square&logo=githubcopilot&logoColor=white)](https://vscode.dev/redirect?url=vscode-insiders://ms-promptu.promptu?prompt=gh:tinkeringDev/CSharpPromptSnippets/.github/prompts/refactor-method-complexity-reduce.prompt.md&input=methodName:Get,complexityThreshold:10)
 
 ## Project Structure
 
@@ -244,7 +247,7 @@ Returns a collection of weather forecasts for the next 5 days with dynamic summa
 ## Requirements
 
 - .NET 9.0 SDK
-- VS Code (with Copilot extension recommended)
+- VS Code (with Copilot and Promptu extension recommended)
 - 100+ MB disk space for dependencies
 
 ## Resources
