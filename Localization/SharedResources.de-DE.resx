@@ -89,7 +89,7 @@
 	<value>Glühend</value>
   </data>
   <data name="Weather_Suffix_Winter" xml:space="preserve">
-	<value> - Winter</value>
+    <value> - Kalt</value>
   </data>
   <data name="Weather_Suffix_StartOfWeek" xml:space="preserve">
 	<value> - Wochenbeginn</value>
