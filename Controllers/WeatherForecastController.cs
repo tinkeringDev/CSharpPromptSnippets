@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
+using CSharpPromptSnippets.Localization;
 
 namespace CSharpPromptSnippets.Controllers
 {
@@ -9,20 +11,35 @@ namespace CSharpPromptSnippets.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        private readonly string[] Summaries;
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IStringLocalizer<SharedResources> _localizer;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WeatherForecastController"/> class.
         /// </summary>
         /// <param name="logger">The logger instance for logging information.</param>
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        /// <param name="localizer">The string localizer for accessing localized resources.</param>
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IStringLocalizer<SharedResources> localizer)
         {
             _logger = logger;
+            _localizer = localizer;
+
+            // Initialize summaries from localized resources
+            Summaries = new[]
+            {
+                _localizer["Weather_Freezing"].Value,
+                _localizer["Weather_Bracing"].Value,
+                _localizer["Weather_Chilly"].Value,
+                _localizer["Weather_Cool"].Value,
+                _localizer["Weather_Mild"].Value,
+                _localizer["Weather_Warm"].Value,
+                _localizer["Weather_Balmy"].Value,
+                _localizer["Weather_Hot"].Value,
+                _localizer["Weather_Sweltering"].Value,
+                _localizer["Weather_Scorching"].Value
+            };
         }
 
         /// <summary>
@@ -43,46 +60,46 @@ namespace CSharpPromptSnippets.Controllers
 
                 if (temperatureC < 0)
                 {
-                    summary = "Freezing";
+                    summary = _localizer["Weather_Freezing"].Value;
                     if (date.Month == 12 || date.Month == 1)
                     {
-                        summary += " - Winter";
+                        summary += _localizer["Weather_Suffix_Winter"].Value;
                     }
                 }
                 else if (temperatureC < 10)
                 {
-                    summary = "Chilly";
+                    summary = _localizer["Weather_Chilly"].Value;
                     if (date.DayOfWeek == DayOfWeek.Monday)
                     {
-                        summary += " - Start of the Week";
+                        summary += _localizer["Weather_Suffix_StartOfWeek"].Value;
                     }
                 }
                 else if (temperatureC > 30)
                 {
-                    summary = "Hot";
+                    summary = _localizer["Weather_Hot"].Value;
                     if (temperatureC > 40)
                     {
-                        summary += " - Extreme Heat";
+                        summary += _localizer["Weather_Suffix_ExtremeHeat"].Value;
                         if (date.DayOfWeek == DayOfWeek.Friday)
                         {
-                            summary += " - Weekend Incoming";
+                            summary += _localizer["Weather_Suffix_WeekendIncoming"].Value;
                         }
                     }
                 }
 
                 if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
                 {
-                    summary += " (Weekend)";
+                    summary += _localizer["Weather_Suffix_Weekend"].Value;
                 }
 
-                if (temperatureC > 40 && summary.Contains("Hot"))
+                if (temperatureC > 40 && summary.Contains(_localizer["Weather_Hot"].Value))
                 {
-                    summary += " - Stay Hydrated";
+                    summary += _localizer["Weather_Suffix_StayHydrated"].Value;
                 }
 
                 if (temperatureC < -10 && date.Month == 1)
                 {
-                    summary += " - Severe Cold";
+                    summary += _localizer["Weather_Suffix_SevereCold"].Value;
                 }
 
                 forecasts.Add(new WeatherForecast
@@ -95,12 +112,12 @@ namespace CSharpPromptSnippets.Controllers
 
             if (forecasts.Any(f => f.TemperatureC > 50))
             {
-                _logger.LogWarning("Extreme temperatures detected in the forecast.");
+                _logger.LogWarning(_localizer["Log_ExtremeTemperaturesDetected"]);
                 foreach (var forecast in forecasts)
                 {
                     if (forecast.TemperatureC > 50)
                     {
-                        _logger.LogInformation($"Extreme temperature on {forecast.Date}: {forecast.TemperatureC}C");
+                        _logger.LogInformation(_localizer["Log_ExtremeTemperatureOn", forecast.Date, forecast.TemperatureC]);
                     }
                 }
             }

@@ -18,6 +18,15 @@ namespace CSharpPromptSnippets
             builder.Services.AddEndpointsApiExplorer(); // discover endpoints through metadata
             builder.Services.AddSwaggerGen();           // generate Swagger docs
 
+            builder.Services.AddLocalization();
+            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[] { "en-US", "de-DE" };
+                options.SetDefaultCulture("en-US")
+                    .AddSupportedCultures(supportedCultures)
+                    .AddSupportedUICultures(supportedCultures);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,6 +40,7 @@ namespace CSharpPromptSnippets
             }
 
             app.UseHttpsRedirection();
+            app.UseRequestLocalization();
             app.MapControllers();
 
             app.Run();
